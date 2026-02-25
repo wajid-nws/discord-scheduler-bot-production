@@ -96,4 +96,9 @@ async def on_ready():
 bot.load_extension("commands.ping")
 bot.load_extension("commands.schedule")
 
-bot.run(TOKEN)
+# bot.run(TOKEN)
+while True:
+    try:
+        bot.run(TOKEN)
+    except Exception as e:
+        print("Bot crashed, restarting...", e)
