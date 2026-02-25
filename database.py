@@ -13,7 +13,7 @@ def init_db():
     cursor = conn.cursor()
 
     cursor.execute("""
-        CREATE TABLE schedules (
+        CREATE TABLE IF NOT EXISTS schedules (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             target TEXT NOT NULL,
             target_ids TEXT NOT NULL,
